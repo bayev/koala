@@ -5,8 +5,7 @@
     <title>gruppövning1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">    
 </head>
 <body>
     <header>
@@ -18,8 +17,13 @@
                 <li>
                     <a href="http//www.google.se">Startsida</a>
                 </li>                
-                    <li >
-                        <a href="#">Utbildningar</a>    
+                    <li class="dropdown" >
+                        <a href="#" >Utbildningar <i class="fas fa-hand-point-down"></i></a> 
+                        <ul class="dropdown-content">
+                            <li> <a href="">Teknisk testare</a></li>
+                            <li> <a href="">Redovisningskonsult</a></li>
+                            <li> <a href="">Front end developer</a></li>
+                        </ul>   
                     </li>               
                 <li>
                     <a href="http//www.google.se">Ansökan</a>
@@ -41,6 +45,36 @@
         </div>
     </header>
 <main>
+    <div class="topslide">
+            <div class="slideshow">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides">
+                      <img src="http://kyh.se/wp-content/uploads/2018/01/startup-photos.jpg" alt="" style="width:30%">
+                      <div class="text">Teknisk testare</div>
+                    </div>
+        
+                    <div class="mySlides">       
+                      <img src="http://kyh.se/wp-content/uploads/2018/01/student-849825_1920-1080x675.jpg" alt="" style="width:30%">
+                      <div class="text">Redovisningskonsult</div>
+                    </div>
+        
+                    <div class="mySlides">
+                      <img src="https://catracalivre.com.br/wp-content/uploads/2016/06/projetos_de_TI_e_programacao.jpg" alt="" style="width:30%">
+                      <div class="text">Front end developer</div>
+                    </div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  <br>
+        
+                  <!-- The dots/circles -->
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+    </div>                     
     <!-- Utbildning 1 -->
     <div id="first" >
         
@@ -53,7 +87,7 @@
         <div class="bild">
             <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2fc341e1e6a4ae6a405bb98e5947559f&auto=format&fit=crop&w=634&q=80" alt="">
         </div>
-
+        
     </div>
     <!-- Utbildning 2 -->
     <div id="second">
@@ -115,6 +149,6 @@
 
 
 </main>
-
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
