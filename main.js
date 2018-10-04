@@ -31,7 +31,7 @@ function showSlides() {
     }
 }  */
 
-/* ======== Kortare variant!!============= */
+/* ======== Kortare variation!!============= */
 
 function plusSlides(j) {
     var i;
