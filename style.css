@@ -2,10 +2,8 @@ header{
     border-bottom: 2px solid rgb(250, 100, 0);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     height: 100px;
-   
 }
-#logo img{
-    
+#logo img{  
     height: 100px;
     float: left;
 }
@@ -20,11 +18,8 @@ header{
     font-size: 20px;
     display: inline;
     margin-left: 22px;
-       
-
 }
 #menyhöger{
-    
     font-size: 20px;
     list-style-type: none;
     margin-left: 100px;
@@ -124,15 +119,7 @@ a:hover{
     margin-left: 300px;
     margin-top: -30px;
 }
-footer{
-    height: 200px;
-    background: black;
-    color: white;
-}
-footer h4{
-    color: rgb(250, 100, 0);
-}
-#f1{
+/* #f1{
     width: 150px;
     margin-left: 50px;
     float: left;
@@ -146,6 +133,26 @@ footer h4{
     width:  auto;
     margin-left: 150px;
     float: left;
+} */
+ footer{
+    width: 100%;
+} 
+footer h4{
+    color: rgb(250, 100, 0);
+}
+.footBar{
+    height: auto;
+    background: black;
+    color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    
+}
+.footInfo{
+    flex-basis: 200px;
+    margin: 0 50px;
+    
 }
 #social a{
     color: white;   
@@ -199,7 +206,8 @@ footer h4{
 /* Hide the images by default */
 .mySlides {
     display:none;
-    text-align: center;   
+    text-align: center; 
+    height: auto;  
 }
 .mySlides img {
     border:2px solid rgb(250, 100, 0);

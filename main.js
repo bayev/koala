@@ -1,7 +1,7 @@
 var slideIndex = 0;
 showSlides();
-
-function showSlides() {
+var timer;
+function showSlides() {  
    var i;
    var slides = document.getElementsByClassName("mySlides");
    for (i = 0; i <slides.length; i++) {
@@ -9,36 +9,35 @@ function showSlides() {
    }
    slideIndex++;
    if (slideIndex > slides.length) {slideIndex = 1}
+   if (slideIndex < 1) {slideIndex = 3}
    slides[slideIndex-1].style.display = "block";
-   setTimeout(showSlides, 5000); // Change image every 5 seconds
-   
+   clearTimeout(timer);
+   timer = setTimeout(showSlides, 2000); // Change image every 5 seconds  
 }
 
 
-/* plusSlides()
-function plusSlides() {
+/* function plusSlides(j) {
+    console.log("j: " + j + " Slide nr " + slideIndex + " visas nu!")
     var i;
     var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i <slides.length; i++) {
-        slides[i].style.display = "none";
- }
-    slideIndex++;
-    if(slides[i].style.display === "block"){ 
-        slides[slideIndex-1].style.display = "block"; 
+    if (j>0) { // vänd på denna > till <
+        console.log("========== PLUS! ===========");
+        //slideIndex++;
+        showSlides(); // behövs båda?
+    } else {
+        slideIndex -= 2; //flytta upp
+        console.log("========== MINUS! ===========");
+        showSlides(); // en räcker, ska den va inuti if-satsen?
+    }
+}  */
+
+/* ======== Kortare variant!!============= */
+
+function plusSlides(j) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    if (j<0) {
+        slideIndex -= 2;
     } 
- 
-
-} */
-
-function plusSlides(){
-    var foto = document.getElementsByClassName("mySlides")
-      
-    if(foto == "front-end.jpg"){
-        foto = "redovisning.jpg"
-    }
-    else{
-        console.log("fel bild")
-    }
-    
-    
-}
+    showSlides();  
+} 
